@@ -1,11 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2023-09-03T19:35:39.424Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="51QsgU23HqSZeO0Zm8Mt" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-03T19:41:50.175Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="ZVFd3qukA9nbEALCZhsB" version="21.7.2" type="github">
   <diagram name="Страница — 1" id="LagbVoApOzLmK0RkumEM">
     <mxGraphModel dx="1026" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Dk_SE6n4_lcxO_wRd2JP-1" value="&lt;br&gt;Database with parsed info about retail stores&amp;nbsp;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="344" y="280" width="140" height="80" as="geometry" />
+        <mxCell id="Dk_SE6n4_lcxO_wRd2JP-1" value="&lt;br&gt;Database with parsed info about retail stores&amp;nbsp;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="320" y="280" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0cum_XTc8PU0dDFvRLmi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0cum_XTc8PU0dDFvRLmi-1" target="Dk_SE6n4_lcxO_wRd2JP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0cum_XTc8PU0dDFvRLmi-1" value="Feedback scraper&lt;br&gt;Planned automatic parser of store reviews." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="180" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
