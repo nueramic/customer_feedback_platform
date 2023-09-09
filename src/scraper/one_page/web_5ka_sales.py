@@ -61,7 +61,7 @@ class Scraper5kaWebsite:
                 cnt_likes = soup1.findAll('span', class_='add_plus')[i + 1].text.strip()
                 cnt_dislikes = soup1.findAll('span', class_='add_minus')[i + 1].text.strip()
 
-                date = soup1.findAll('p', class_='com_date pull-left')[0].text.strip()
+                date = soup1.findAll('p', class_='com_date pull-left')[i].text.strip()
 
                 if 'Вчера в' in date:
                     date = date.replace('Вчера в', yesterday).strip()[:25]

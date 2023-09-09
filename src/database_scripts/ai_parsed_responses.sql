@@ -27,19 +27,19 @@ $$;
 select f_ai_parse_responses();
 
 
-create view v_ai_parsed_responses as
+create or replace view v_ai_parsed_responses as
 select id_feedback                                                            as id_feedback
      , (json_gpt_resp_content -> 'общее впечатление' ->> 'score')::numeric    as score_overall
      , (json_gpt_resp_content -> 'общее впечатление' ->> 'summary')           as txt_overall
-     , (json_gpt_resp_content -> 'цены и ценники' ->> 'score')::numeric       as score_product_range
-     , (json_gpt_resp_content -> 'цены и ценники' ->> 'summary')              as txt_product_range
-     , (json_gpt_resp_content -> 'программа лояльности' ->> 'score')::numeric as score_staff
-     , (json_gpt_resp_content -> 'программа лояльности' ->> 'summary')        as txt_staff
-     , (json_gpt_resp_content -> 'свежесть продуктов' ->> 'score')::numeric   as score_prices
-     , (json_gpt_resp_content -> 'свежесть продуктов' ->> 'summary')          as txt_prices
-     , (json_gpt_resp_content -> 'работа персонала' ->> 'score')::numeric     as score_freshness
-     , (json_gpt_resp_content -> 'работа персонала' ->> 'summary')            as txt_freshness
-     , (json_gpt_resp_content -> 'ассортимент' ->> 'score')::numeric          as score_bonus_program
-     , (json_gpt_resp_content -> 'ассортимент' ->> 'summary')                 as txt_bonus_program
+     , (json_gpt_resp_content -> 'ассортимент' ->> 'score')::numeric          as score_product_range
+     , (json_gpt_resp_content -> 'ассортимент' ->> 'summary')                 as txt_product_range
+     , (json_gpt_resp_content -> 'работа персонала' ->> 'score')::numeric     as score_staff
+     , (json_gpt_resp_content -> 'работа персонала' ->> 'summary')            as txt_staff
+     , (json_gpt_resp_content -> 'цены и ценники' ->> 'score')::numeric       as score_prices
+     , (json_gpt_resp_content -> 'цены и ценники' ->> 'summary')              as txt_prices
+     , (json_gpt_resp_content -> 'свежесть продуктов' ->> 'score')::numeric   as score_freshness
+     , (json_gpt_resp_content -> 'свежесть продуктов' ->> 'summary')          as txt_freshness
+     , (json_gpt_resp_content -> 'программа лояльности' ->> 'score')::numeric as score_bonus_program
+     , (json_gpt_resp_content -> 'программа лояльности' ->> 'summary')        as txt_bonus_program
      , dtime_updated                                                          as dtime_updated
 from ai_responses;
