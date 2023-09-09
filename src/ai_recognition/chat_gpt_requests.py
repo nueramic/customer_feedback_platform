@@ -33,7 +33,7 @@ class AnalyzeFeedback:
 
         message = f"""
         {self.gpt_config['gpt_role']['instruction']}
-        отзыв: \n {text_feedback} 
+        отзыв: \n {text_feedback[:5000]} 
         оценка: {rating} / {max_rating}
         """
 
